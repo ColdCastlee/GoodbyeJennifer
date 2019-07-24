@@ -34,6 +34,8 @@ namespace Game.View.PanelSystem
             p.Init(panelName);
 
             panelDic.Add(panelName, p);
+            //GameMgr.MessageBox("Register"+panelName);
+
         }
 
 
@@ -60,22 +62,19 @@ namespace Game.View.PanelSystem
             if (m_TransFrom == null)
                 this.Load();
             this.Show();
-            if (onPanelShow != null)
-                onPanelShow(panelName);
+            onPanelShow?.Invoke(panelName);
         }
 
         public virtual void Disable()
         {
             this.Hide();
-            if (onPanelHide != null)
-                onPanelHide(panelName);
+            onPanelHide?.Invoke(panelName);
         }
 
 
         public virtual void Destory()
         {
-            if (onPanelDestory != null)
-                onPanelDestory(this.panelName);
+            onPanelDestory?.Invoke(this.panelName);
             this.Disable();
             this.DestroyThis();
         }

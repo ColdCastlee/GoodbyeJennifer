@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene_fxy.unity
     guid: d5664c304ec46d34ebbfbf66a41a4c16
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 3c8690425b97a6941815faa948290d28
   m_configObjects: {}

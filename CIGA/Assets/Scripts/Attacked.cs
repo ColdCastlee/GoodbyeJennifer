@@ -3,6 +3,7 @@ using Game.Const;
 using Game.Script;
 using Game.View.PanelSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Attacked : MonoBehaviour
@@ -22,7 +23,11 @@ public class Attacked : MonoBehaviour
             {
                 bloodSlider.value = bloodSlider.maxValue;
                 MainLoop.Instance.ExecuteLater(() =>
-                    UIManager.Instance.PushPanel(UIName.Player1Win), 1);
+                {
+                    Debug.Log("Player1Win");
+                    GameMgr.Instance.nextUIPanelName = UIName.Player1Win;
+                    SceneManager.LoadScene("WinScene");
+                }, 1);
             }
             else
             {

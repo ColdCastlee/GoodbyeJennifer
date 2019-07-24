@@ -7,15 +7,10 @@ using UnityEngine;
 namespace Game.View.PanelSystem
 {
     /// <summary>
-    /// 总UI管理者
+    /// 总UI管理者a
     /// </summary>
     public class UIManager : Singleton<UIManager>
     {
-        public UIManager()
-        {
-
-        }
-
         private Stack<IStackPanel> panelStack = new Stack<IStackPanel>();
 
         public IStackPanel CurrentPanel

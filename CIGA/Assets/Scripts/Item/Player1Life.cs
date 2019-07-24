@@ -2,9 +2,10 @@ using Game.Const;
 using Game.Script;
 using Game.View.PanelSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
-    public class Player1Life : MonoBehaviour
+public class Player1Life : MonoBehaviour
     {
 
         public GameObject playerOneUI;
@@ -22,7 +23,9 @@ using UnityEngine;
             }
             if (count <= 2)
             {
-                UIManager.Instance.PushPanel(UIName.Player2Win);
+                Debug.Log("Player2Win");
+                GameMgr.Instance.nextUIPanelName = UIName.Player2Win;
+                SceneManager.LoadScene("WinScene");
             }
             else
             {

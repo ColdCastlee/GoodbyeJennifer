@@ -171,6 +171,7 @@
             <e p="Trigger2DMessage.cs" t="Include" />
           </e>
           <e p="Const" t="Include">
+            <e p="AudioName.cs" t="Include" />
             <e p="DirPath.cs" t="Include" />
             <e p="UIName.cs" t="Include" />
           </e>

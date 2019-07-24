@@ -35,7 +35,16 @@ using UnityEngine;
                 GlobalVar.InitSceneMark();
 
         }
-        
+
+        private void Start()
+        {
+            if (GameMgr.Instance && !string.IsNullOrEmpty(GameMgr.Instance.nextUIPanelName))
+            {
+                UIManager.Instance.PushPanel(GameMgr.Instance.nextUIPanelName);
+                GameMgr.Instance.nextUIPanelName = null;
+            }
+        }
+
 
         void RegisterUI()
         {
